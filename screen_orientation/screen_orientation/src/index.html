@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Orientation</title>
+</head>
+<body>
+    <script type="module">
+        import init, { start } from '../pkg/screen_orientation.js';
+        async function run() {
+            await init();
+            console.log("Rust WASM initialized successfully")
+            start();
+        }
+        run();
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WASM Scrollbar</title>
+    <script type="module">
+        import init, { monitor_scrollbar } from '../pkg/wasm_scrollbar.js';
+
+        async function run() {
+            await init();
+            monitor_scrollbar();
+        }
+
+        window.onload = run;
+    </script>
+    <style>
+       
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content of your web page -->
+    <div style="height: 2000px; width: 2000px;">Creating WASM Scrollbar using Rust</div>
+</body>
+</html>
